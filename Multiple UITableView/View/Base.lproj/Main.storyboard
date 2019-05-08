@@ -18,23 +18,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="P92-lk-ztg">
-                                <rect key="frame" x="0.0" y="88" width="229" height="724"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="P92-lk-ztg">
+                                <rect key="frame" x="0.0" y="88" width="285" height="724"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7fY-Cr-8Rz">
-                                <rect key="frame" x="245" y="88" width="130" height="724"/>
+                                <rect key="frame" x="285" y="88" width="90" height="724"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="130" id="jK3-lY-aVq"/>
+                                    <constraint firstAttribute="width" constant="90" id="jK3-lY-aVq"/>
                                 </constraints>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="P92-lk-ztg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3Sx-2k-Gew"/>
                             <constraint firstAttribute="bottom" secondItem="7fY-Cr-8Rz" secondAttribute="bottom" id="7As-qa-6IO"/>
-                            <constraint firstItem="7fY-Cr-8Rz" firstAttribute="leading" secondItem="P92-lk-ztg" secondAttribute="trailing" constant="16" id="Wht-25-kdA"/>
+                            <constraint firstItem="7fY-Cr-8Rz" firstAttribute="leading" secondItem="P92-lk-ztg" secondAttribute="trailing" id="Wht-25-kdA"/>
                             <constraint firstItem="7fY-Cr-8Rz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="f6F-O3-fpP"/>
                             <constraint firstItem="P92-lk-ztg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jCQ-5e-Gqc"/>
                             <constraint firstItem="7fY-Cr-8Rz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kCS-br-e2Z"/>

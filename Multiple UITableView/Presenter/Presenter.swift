@@ -32,6 +32,13 @@ final class Presenter: NSObject {
         let tehran = CitiesModel(name:"Tehran")
         let london = CitiesModel(name: "London")
         let vancouver = CitiesModel(name: "Vancouver")
+        let rome = CitiesModel(name: "Rome")
+        let manchester = CitiesModel(name: "Manchester")
+        let lisbon = CitiesModel(name: "Lisbon")
+        let texas = CitiesModel(name: "Texas")
+        let denver = CitiesModel(name: "Denver")
+        let torin = CitiesModel(name: "Torin")
+        let berlin = CitiesModel(name: "Berlin")
         
         array.append(montreal)
         array.append(newyork)
@@ -40,6 +47,13 @@ final class Presenter: NSObject {
         array.append(tehran)
         array.append(london)
         array.append(vancouver)
+        array.append(rome)
+        array.append(manchester)
+        array.append(lisbon)
+        array.append(texas)
+        array.append(denver)
+        array.append(torin)
+        array.append(berlin)
         
         view?.setCities(with: array)
     }

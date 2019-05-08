@@ -41,6 +41,7 @@ extension ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.getCities()
+        presenter.getInfo()
     }
 }
 
