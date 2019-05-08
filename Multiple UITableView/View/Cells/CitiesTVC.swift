@@ -21,8 +21,8 @@ final class CitiesTVC: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    public func fill(cell by:CitiesModel) {
-        nameLabel.text = by.name
+    public func fill(cell by:String) {
+        nameLabel.text = by
     }
     
 }

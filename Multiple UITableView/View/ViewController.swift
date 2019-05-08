@@ -12,8 +12,8 @@ final class ViewController: UIViewController {
     
     private var cities = Array<CitiesModel>()
     private var infoes = Array<InfoModel>()
-    private var citiesSection = Array<String>()
-    private var citiesDict = [String:Array<String>]()
+    private var citiesDictionary = [String: Array<String>]()
+    private var citySectionTitles = Array<String>()
 
     private lazy var presenter:Presenter = {
         let temp = Presenter(view: self)
@@ -35,21 +35,26 @@ final class ViewController: UIViewController {
             infoTableView.register(UINib(nibName: "InfoTVC", bundle: nil), forCellReuseIdentifier: "InfoTVC")
         }
     }
+    @IBOutlet weak private var infoTableLeadingConstraint: NSLayoutConstraint!
     
-    private func generateWordsDict() {
+    @IBAction private func onClickCitiesBarButtonItem(_ sender: UIBarButtonItem) {
+        
+        CitiesTableAnimation(parentView: view,
+                             leadingConstraint: infoTableLeadingConstraint).animate()
+    }
+    private func generateCitiesDict() {
         for city in cities {
-            let key = "\(city.name[city.name.startIndex])"
-            let lower = key.lowercased()
-            
-            if var cityValue = citiesDict[lower] {
-                cityValue.append(city.name)
-                citiesDict[lower] = cityValue
+            let cityKey = String(city.name.prefix(1))
+            if var cityValues = citiesDictionary[cityKey] {
+                cityValues.append(city.name)
+                citiesDictionary[cityKey] = cityValues
             } else {
-                citiesDict[lower] = [city.name]
+                citiesDictionary[cityKey] = [city.name]
             }
         }
-        citiesSection = [String](citiesDict.keys)
-        citiesSection = citiesSection.sorted()
+        
+        citySectionTitles = [String](citiesDictionary.keys)
+        citySectionTitles = citySectionTitles.sorted(by: { $0 < $1 })
     }
 }
 
@@ -68,7 +73,7 @@ extension ViewController {
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         if tableView == citiesTableView {
-            return citiesSection.count
+            return citySectionTitles.count
         } else {
             return 1
         }
@@ -76,7 +81,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if tableView == citiesTableView {
-            return citiesSection[section]
+            return citySectionTitles[section]
         } else {
             return nil
         }
@@ -85,8 +90,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == citiesTableView {
             
-            let cityKey = citiesSection[section]
-            if let cityValues = citiesDict[cityKey] {
+            let cityKey = citySectionTitles[section]
+            if let cityValues = citiesDictionary[cityKey] {
                 return cityValues.count
             }
             
@@ -102,11 +107,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "CitiesTVC") as! CitiesTVC
             
-            let cityKey = citiesSection[indexPath.row]
-            if let _ = citiesDict[cityKey.lowercased()] {
-                cell.fill(cell: cities[indexPath.row])
+            let cityKey = citySectionTitles[indexPath.section]
+            if let cityValues = citiesDictionary[cityKey] {
+                cell.fill(cell: cityValues[indexPath.row])
             }
-            
             return cell
             
         } else {
@@ -119,21 +123,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         if tableView == citiesTableView {
-            return citiesSection
+            return citySectionTitles
         } else {
             return nil
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
-        
-        if tableView == citiesTableView {
-            guard let index = citiesSection.index(of: title) else {
-                return -1
-            }
-            return index
-        } else {
-            return -1
         }
     }
     
@@ -151,7 +143,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 extension ViewController: View {
     func setCities(with object: [CitiesModel]) {
         cities = object
-        generateWordsDict()
+        generateCitiesDict()
         citiesTableView.reloadData()
     }
     

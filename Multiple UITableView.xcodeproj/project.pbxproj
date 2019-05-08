@@ -19,6 +19,7 @@
 		F45D18432282BD4E0035050A /* CitiesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45D18412282BD4E0035050A /* CitiesTVC.swift */; };
 		F45D18442282BD4E0035050A /* CitiesTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F45D18422282BD4E0035050A /* CitiesTVC.xib */; };
 		F45D18462282BDF80035050A /* InfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45D18452282BDF80035050A /* InfoModel.swift */; };
+		F49EB1612282EA82004CDAAD /* CitiesTableAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49EB1602282EA82004CDAAD /* CitiesTableAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		F45D18412282BD4E0035050A /* CitiesTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesTVC.swift; sourceTree = "<group>"; };
 		F45D18422282BD4E0035050A /* CitiesTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CitiesTVC.xib; sourceTree = "<group>"; };
 		F45D18452282BDF80035050A /* InfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoModel.swift; sourceTree = "<group>"; };
+		F49EB1602282EA82004CDAAD /* CitiesTableAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesTableAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				F45D18252282BA070035050A /* ViewController.swift */,
 				F45D18272282BA070035050A /* Main.storyboard */,
 				F45D182C2282BA080035050A /* LaunchScreen.storyboard */,
+				F49EB1602282EA82004CDAAD /* CitiesTableAnimation.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				F45D183C2282BCC20035050A /* Presenter.swift in Sources */,
 				F45D18462282BDF80035050A /* InfoModel.swift in Sources */,
 				F45D18372282BBD90035050A /* InfoTVC.swift in Sources */,
+				F49EB1612282EA82004CDAAD /* CitiesTableAnimation.swift in Sources */,
 				F45D18402282BD1A0035050A /* CitiesModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
