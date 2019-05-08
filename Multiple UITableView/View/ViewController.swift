@@ -79,12 +79,20 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if tableView == citiesTableView {
-            return citySectionTitles[section]
+            let label = UILabel()
+//                 rgb(30, 144, 255)
+            label.font = UIFont(name: "AvenirNext-Bold ", size: 14)
+            label.textColor = UIColor(red: 30/255, green: 144/255, blue: 255/255, alpha: 1)
+            label.textAlignment = .left
+            label.backgroundColor = .clear
+            label.text = citySectionTitles[section]
+            return label
         } else {
             return nil
         }
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
