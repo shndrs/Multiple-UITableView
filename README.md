@@ -1,5 +1,5 @@
 # Multiple-UITableView
-<p>A project about Multiple UITableView in one UIViewController, self size (auto size) UITableViewCell</p>
+<p>A project about Multiple UITableView in one UIViewController, self size (auto size) UITableViewCell and section index titles sort with MVP SA</p>
 <p>Hope you guys enjoy it ❤</p>  
 
 
