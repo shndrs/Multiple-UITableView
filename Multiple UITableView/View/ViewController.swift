@@ -10,9 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet private weak var citiesTableView:UITableView!
+    @IBOutlet private weak var infoTableView:UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
 

@@ -12,6 +12,12 @@
 		F45D18292282BA070035050A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F45D18272282BA070035050A /* Main.storyboard */; };
 		F45D182B2282BA080035050A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F45D182A2282BA080035050A /* Assets.xcassets */; };
 		F45D182E2282BA080035050A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F45D182C2282BA080035050A /* LaunchScreen.storyboard */; };
+		F45D18372282BBD90035050A /* InfoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45D18352282BBD90035050A /* InfoTVC.swift */; };
+		F45D18382282BBD90035050A /* InfoTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F45D18362282BBD90035050A /* InfoTVC.xib */; };
+		F45D183C2282BCC20035050A /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45D183B2282BCC20035050A /* Presenter.swift */; };
+		F45D18402282BD1A0035050A /* CitiesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45D183F2282BD1A0035050A /* CitiesModel.swift */; };
+		F45D18432282BD4E0035050A /* CitiesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45D18412282BD4E0035050A /* CitiesTVC.swift */; };
+		F45D18442282BD4E0035050A /* CitiesTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F45D18422282BD4E0035050A /* CitiesTVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		F45D182A2282BA080035050A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F45D182D2282BA080035050A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F45D182F2282BA080035050A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F45D18352282BBD90035050A /* InfoTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTVC.swift; sourceTree = "<group>"; };
+		F45D18362282BBD90035050A /* InfoTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoTVC.xib; sourceTree = "<group>"; };
+		F45D183B2282BCC20035050A /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		F45D183F2282BD1A0035050A /* CitiesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesModel.swift; sourceTree = "<group>"; };
+		F45D18412282BD4E0035050A /* CitiesTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesTVC.swift; sourceTree = "<group>"; };
+		F45D18422282BD4E0035050A /* CitiesTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CitiesTVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +66,52 @@
 		F45D18222282BA070035050A /* Multiple UITableView */ = {
 			isa = PBXGroup;
 			children = (
+				F45D183D2282BCEC0035050A /* Inner Model */,
+				F45D183E2282BCF80035050A /* View */,
+				F45D183A2282BCA50035050A /* Presenter */,
 				F45D18232282BA070035050A /* AppDelegate.swift */,
-				F45D18252282BA070035050A /* ViewController.swift */,
-				F45D18272282BA070035050A /* Main.storyboard */,
 				F45D182A2282BA080035050A /* Assets.xcassets */,
 				F45D182C2282BA080035050A /* LaunchScreen.storyboard */,
 				F45D182F2282BA080035050A /* Info.plist */,
 			);
 			path = "Multiple UITableView";
+			sourceTree = "<group>";
+		};
+		F45D18392282BBE30035050A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F45D18352282BBD90035050A /* InfoTVC.swift */,
+				F45D18362282BBD90035050A /* InfoTVC.xib */,
+				F45D18412282BD4E0035050A /* CitiesTVC.swift */,
+				F45D18422282BD4E0035050A /* CitiesTVC.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F45D183A2282BCA50035050A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				F45D183B2282BCC20035050A /* Presenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		F45D183D2282BCEC0035050A /* Inner Model */ = {
+			isa = PBXGroup;
+			children = (
+				F45D183F2282BD1A0035050A /* CitiesModel.swift */,
+			);
+			path = "Inner Model";
+			sourceTree = "<group>";
+		};
+		F45D183E2282BCF80035050A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F45D18392282BBE30035050A /* Cells */,
+				F45D18252282BA070035050A /* ViewController.swift */,
+				F45D18272282BA070035050A /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,7 +173,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F45D182E2282BA080035050A /* LaunchScreen.storyboard in Resources */,
+				F45D18382282BBD90035050A /* InfoTVC.xib in Resources */,
 				F45D182B2282BA080035050A /* Assets.xcassets in Resources */,
+				F45D18442282BD4E0035050A /* CitiesTVC.xib in Resources */,
 				F45D18292282BA070035050A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +187,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F45D18432282BD4E0035050A /* CitiesTVC.swift in Sources */,
 				F45D18262282BA070035050A /* ViewController.swift in Sources */,
 				F45D18242282BA070035050A /* AppDelegate.swift in Sources */,
+				F45D183C2282BCC20035050A /* Presenter.swift in Sources */,
+				F45D18372282BBD90035050A /* InfoTVC.swift in Sources */,
+				F45D18402282BD1A0035050A /* CitiesModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

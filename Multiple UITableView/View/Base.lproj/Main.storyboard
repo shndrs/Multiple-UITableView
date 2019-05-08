@@ -18,20 +18,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="P92-lk-ztg">
-                                <rect key="frame" x="0.0" y="64" width="240" height="603"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="P92-lk-ztg">
+                                <rect key="frame" x="0.0" y="88" width="229" height="724"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7fY-Cr-8Rz">
+                                <rect key="frame" x="245" y="88" width="130" height="724"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="jK3-lY-aVq"/>
+                                </constraints>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="P92-lk-ztg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3Sx-2k-Gew"/>
+                            <constraint firstAttribute="bottom" secondItem="7fY-Cr-8Rz" secondAttribute="bottom" id="7As-qa-6IO"/>
+                            <constraint firstItem="7fY-Cr-8Rz" firstAttribute="leading" secondItem="P92-lk-ztg" secondAttribute="trailing" constant="16" id="Wht-25-kdA"/>
+                            <constraint firstItem="7fY-Cr-8Rz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="f6F-O3-fpP"/>
+                            <constraint firstItem="P92-lk-ztg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jCQ-5e-Gqc"/>
+                            <constraint firstItem="7fY-Cr-8Rz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kCS-br-e2Z"/>
+                            <constraint firstAttribute="bottom" secondItem="P92-lk-ztg" secondAttribute="bottom" id="mlZ-17-vHv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="bli-iS-qfF"/>
+                    <connections>
+                        <outlet property="citiesTableView" destination="7fY-Cr-8Rz" id="pb1-tF-YCF"/>
+                        <outlet property="infoTableView" destination="P92-lk-ztg" id="3oO-2H-67N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="637.60000000000002" y="-564.46776611694156"/>
+            <point key="canvasLocation" x="637.60000000000002" y="-564.53201970443354"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="n0P-fA-Fbe">
