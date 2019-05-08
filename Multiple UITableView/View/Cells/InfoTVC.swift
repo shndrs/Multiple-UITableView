@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InfoTVC: UITableViewCell {
+final class InfoTVC: UITableViewCell {
     
     @IBOutlet private weak var descLabel:UILabel!
     @IBOutlet private weak var populationLabel:UILabel!
@@ -30,5 +30,4 @@ class InfoTVC: UITableViewCell {
         langLabel.text = by.lang
         bannerImage.image = by.image
     }
-    
 }

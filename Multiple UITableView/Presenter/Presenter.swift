@@ -25,7 +25,10 @@ final class Presenter: NSObject {
         
         var array = Array<CitiesModel>()
         
+        let athen = CitiesModel(name:"Athen")
+        let helsinki = CitiesModel(name: "Helsinki")
         let montreal = CitiesModel(name:"Montreal")
+        let espoo = CitiesModel(name: "Espoo")
         let newyork = CitiesModel(name:"New York")
         let milan = CitiesModel(name:"Milan")
         let la = CitiesModel(name:"Los Angles")
@@ -40,6 +43,9 @@ final class Presenter: NSObject {
         let torin = CitiesModel(name: "Torin")
         let berlin = CitiesModel(name: "Berlin")
         
+        array.append(athen)
+        array.append(helsinki)
+        array.append(espoo)
         array.append(montreal)
         array.append(newyork)
         array.append(milan)

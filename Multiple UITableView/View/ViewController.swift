@@ -14,7 +14,6 @@ final class ViewController: UIViewController {
     private var infoes = Array<InfoModel>()
     private var citiesDictionary = [String: Array<String>]()
     private var citySectionTitles = Array<String>()
-
     private lazy var presenter:Presenter = {
         let temp = Presenter(view: self)
         return temp
@@ -80,11 +79,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
         if tableView == citiesTableView {
             let label = UILabel()
-//                 rgb(30, 144, 255)
-            label.font = UIFont(name: "AvenirNext-Bold ", size: 14)
-            label.textColor = UIColor(red: 30/255, green: 144/255, blue: 255/255, alpha: 1)
+            label.font = UIFont(name: "AvenirNext-Heavy", size: 14)
+            label.textColor = .darkGray
             label.textAlignment = .left
             label.backgroundColor = .clear
             label.text = citySectionTitles[section]
@@ -92,7 +91,13 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
             return nil
         }
-        
+    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if tableView == citiesTableView {
+            return 45
+        } else {
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
