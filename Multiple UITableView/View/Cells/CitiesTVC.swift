@@ -8,17 +8,21 @@
 
 import UIKit
 
-class CitiesTVC: UITableViewCell {
+final class CitiesTVC: UITableViewCell {
+    
+    @IBOutlet private weak var nameLabel:UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+    
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    }
+    
+    public func fill(cell by:CitiesModel) {
+        nameLabel.text = by.name
     }
     
 }
