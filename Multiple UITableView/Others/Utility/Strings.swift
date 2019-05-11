@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+public enum CellIds: String {
+    
+    case citiesTVC = "CitiesTVC";
+    case infoTVC = "InfoTVC"
+    
+}
+
+public enum FontName: String {
+    case avenirNextHeavy = "AvenirNext-Heavy"
+}

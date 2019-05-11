@@ -23,7 +23,8 @@ final class ViewController: UIViewController {
         didSet {
             citiesTableView.delegate = self
             citiesTableView.dataSource = self
-            citiesTableView.register(UINib(nibName: "CitiesTVC", bundle: nil), forCellReuseIdentifier: "CitiesTVC")
+            citiesTableView.register(UINib(nibName: CellIds.citiesTVC.rawValue, bundle: nil),
+                                     forCellReuseIdentifier: CellIds.citiesTVC.rawValue)
         }
     }
     @IBOutlet private weak var infoTableView:UITableView! {
@@ -31,7 +32,8 @@ final class ViewController: UIViewController {
             infoTableView.delegate = self
             infoTableView.dataSource = self
             infoTableView.estimatedRowHeight = 139
-            infoTableView.register(UINib(nibName: "InfoTVC", bundle: nil), forCellReuseIdentifier: "InfoTVC")
+            infoTableView.register(UINib(nibName: CellIds.infoTVC.rawValue, bundle: nil),
+                                   forCellReuseIdentifier: CellIds.infoTVC.rawValue)
         }
     }
     @IBOutlet weak private var infoTableLeadingConstraint: NSLayoutConstraint!
@@ -82,7 +84,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         if tableView == citiesTableView {
             let label = UILabel()
-            label.font = UIFont(name: "AvenirNext-Heavy", size: 14)
+            label.font = UIFont(name: FontName.avenirNextHeavy.rawValue, size: 14)
             label.textColor = .darkGray
             label.textAlignment = .left
             label.backgroundColor = .clear
@@ -118,7 +120,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         if tableView == citiesTableView {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CitiesTVC") as! CitiesTVC
+            let cell = tableView.dequeueReusableCell(withIdentifier: CellIds.citiesTVC.rawValue) as! CitiesTVC
             
             let cityKey = citySectionTitles[indexPath.section]
             if let cityValues = citiesDictionary[cityKey] {
@@ -128,7 +130,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             
         } else {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: "InfoTVC") as! InfoTVC
+            let cell = tableView.dequeueReusableCell(withIdentifier: CellIds.infoTVC.rawValue) as! InfoTVC
             cell.fill(cell: infoes[indexPath.row])
             return cell
         }

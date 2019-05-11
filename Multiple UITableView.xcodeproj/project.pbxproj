@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F43AD77E2286906E007CACA6 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43AD77D2286906E007CACA6 /* Strings.swift */; };
 		F45D18242282BA070035050A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45D18232282BA070035050A /* AppDelegate.swift */; };
 		F45D18262282BA070035050A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45D18252282BA070035050A /* ViewController.swift */; };
 		F45D18292282BA070035050A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F45D18272282BA070035050A /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F43AD77D2286906E007CACA6 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		F45D18202282BA070035050A /* Multiple UITableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Multiple UITableView.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F45D18232282BA070035050A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F45D18252282BA070035050A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +53,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F43AD77B22869054007CACA6 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				F43AD77C22869061007CACA6 /* Utility */,
+				F49EB15F2282D27B004CDAAD /* Resources */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		F43AD77C22869061007CACA6 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				F43AD77D2286906E007CACA6 /* Strings.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		F45D18172282BA070035050A = {
 			isa = PBXGroup;
 			children = (
@@ -70,7 +89,7 @@
 		F45D18222282BA070035050A /* Multiple UITableView */ = {
 			isa = PBXGroup;
 			children = (
-				F49EB15F2282D27B004CDAAD /* Resources */,
+				F43AD77B22869054007CACA6 /* Others */,
 				F45D183D2282BCEC0035050A /* Inner Model */,
 				F45D183E2282BCF80035050A /* View */,
 				F45D183A2282BCA50035050A /* Presenter */,
@@ -202,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F45D18432282BD4E0035050A /* CitiesTVC.swift in Sources */,
+				F43AD77E2286906E007CACA6 /* Strings.swift in Sources */,
 				F45D18262282BA070035050A /* ViewController.swift in Sources */,
 				F45D18242282BA070035050A /* AppDelegate.swift in Sources */,
 				F45D183C2282BCC20035050A /* Presenter.swift in Sources */,
