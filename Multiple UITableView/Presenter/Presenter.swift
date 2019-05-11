@@ -25,23 +25,23 @@ final class Presenter: NSObject {
         
         var array = Array<CitiesModel>()
         
-        let athen = CitiesModel(name:"Athen")
-        let helsinki = CitiesModel(name: "Helsinki")
-        let montreal = CitiesModel(name:"Montreal")
-        let espoo = CitiesModel(name: "Espoo")
-        let newyork = CitiesModel(name:"New York")
-        let milan = CitiesModel(name:"Milan")
-        let la = CitiesModel(name:"Los Angles")
-        let tehran = CitiesModel(name:"Tehran")
-        let london = CitiesModel(name: "London")
-        let vancouver = CitiesModel(name: "Vancouver")
-        let rome = CitiesModel(name: "Rome")
-        let manchester = CitiesModel(name: "Manchester")
-        let lisbon = CitiesModel(name: "Lisbon")
-        let texas = CitiesModel(name: "Texas")
-        let denver = CitiesModel(name: "Denver")
-        let torin = CitiesModel(name: "Torin")
-        let berlin = CitiesModel(name: "Berlin")
+        let athen = CitiesModel(name:Strings.athen.rawValue)
+        let helsinki = CitiesModel(name:Strings.helsinki.rawValue)
+        let montreal = CitiesModel(name:Strings.montreal.rawValue)
+        let espoo = CitiesModel(name:Strings.espoo.rawValue)
+        let newyork = CitiesModel(name:Strings.newyork.rawValue)
+        let milan = CitiesModel(name:Strings.milan.rawValue)
+        let la = CitiesModel(name:Strings.la.rawValue)
+        let tehran = CitiesModel(name:Strings.tehran.rawValue)
+        let london = CitiesModel(name:Strings.london.rawValue)
+        let vancouver = CitiesModel(name:Strings.vancouver.rawValue)
+        let rome = CitiesModel(name:Strings.rome.rawValue)
+        let manchester = CitiesModel(name:Strings.manchester.rawValue)
+        let lisbon = CitiesModel(name:Strings.lisbon.rawValue)
+        let texas = CitiesModel(name:Strings.texas.rawValue)
+        let denver = CitiesModel(name:Strings.denver.rawValue)
+        let torin = CitiesModel(name:Strings.torin.rawValue)
+        let berlin = CitiesModel(name:Strings.berlin.rawValue)
         
         array.append(athen)
         array.append(helsinki)
@@ -68,11 +68,17 @@ final class Presenter: NSObject {
         
         var array = Array<InfoModel>()
         
-        let ny = InfoModel.init(desc: "New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers.", population: "8.623 million", lang: "English", image: #imageLiteral(resourceName: "ny"))
+        let ny = InfoModel.init(desc: Strings.nyDesc.rawValue,
+                                population: Strings.nyPopulation.rawValue,
+                                lang: Strings.nyLang.rawValue, image: #imageLiteral(resourceName: "ny"))
         
-        let montreal = InfoModel.init(desc: "Montréal is the largest city in Canada's Québec province. It’s set on an island in the Saint Lawrence River and named after Mt. Royal, the triple-peaked hill at its heart", population: "1.78 million", lang: "English/French", image: #imageLiteral(resourceName: "montreal"))
+        let montreal = InfoModel.init(desc: Strings.montreal.rawValue,
+                                      population: Strings.montrealPopulation.rawValue,
+                                      lang: Strings.montrealLang.rawValue, image: #imageLiteral(resourceName: "montreal"))
         
-        let milan = InfoModel.init(desc: "Milan, a metropolis in Italy's northern Lombardy region, is a global capital of fashion and design. Home to the national stock exchange, it’s a financial hub also known for its high-end restaurants and shops.", population: "1.352 million", lang: "Itilian", image: #imageLiteral(resourceName: "milan"))
+        let milan = InfoModel.init(desc: Strings.milanDesc.rawValue,
+                                   population: Strings.milanPopulation.rawValue,
+                                   lang: Strings.milanLang.rawValue, image: #imageLiteral(resourceName: "milan"))
         
         array.append(ny)
         array.append(montreal)

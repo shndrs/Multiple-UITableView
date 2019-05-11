@@ -8,16 +8,20 @@
 
 import UIKit
 
-struct CitiesTableAnimation {
+fileprivate protocol CitiesTable {
+    var parentView: UIView! { get }
+    var leadingConstraint: NSLayoutConstraint! { get }
+}
+
+struct CitiesTableAnimation: CitiesTable {
     
-    private var parentView:UIView!
-    private var leadingConstraint:NSLayoutConstraint!
+    fileprivate var parentView:UIView!
+    fileprivate var leadingConstraint:NSLayoutConstraint!
     
     init(parentView:UIView, leadingConstraint:NSLayoutConstraint) {
         self.parentView = parentView
         self.leadingConstraint = leadingConstraint
     }
-    
     
     public func animate() {
         

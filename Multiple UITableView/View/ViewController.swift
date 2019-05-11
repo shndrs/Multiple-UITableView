@@ -14,7 +14,8 @@ final class ViewController: UIViewController {
     private var infoes = Array<InfoModel>()
     private var citiesDictionary = [String: Array<String>]()
     private var citySectionTitles = Array<String>()
-    private lazy var presenter:Presenter = {
+    
+    private lazy var presenter: Presenter = {
         let temp = Presenter(view: self)
         return temp
     }()

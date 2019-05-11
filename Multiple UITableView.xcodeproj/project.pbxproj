@@ -56,6 +56,7 @@
 		F43AD77B22869054007CACA6 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				F43AD77F2286A81B007CACA6 /* Application Delegate */,
 				F43AD77C22869061007CACA6 /* Utility */,
 				F49EB15F2282D27B004CDAAD /* Resources */,
 			);
@@ -68,6 +69,14 @@
 				F43AD77D2286906E007CACA6 /* Strings.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		F43AD77F2286A81B007CACA6 /* Application Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				F45D18232282BA070035050A /* AppDelegate.swift */,
+			);
+			path = "Application Delegate";
 			sourceTree = "<group>";
 		};
 		F45D18172282BA070035050A = {
@@ -93,7 +102,6 @@
 				F45D183D2282BCEC0035050A /* Inner Model */,
 				F45D183E2282BCF80035050A /* View */,
 				F45D183A2282BCA50035050A /* Presenter */,
-				F45D18232282BA070035050A /* AppDelegate.swift */,
 				F45D182F2282BA080035050A /* Info.plist */,
 			);
 			path = "Multiple UITableView";
@@ -133,8 +141,8 @@
 				F45D18392282BBE30035050A /* Cells */,
 				F45D18252282BA070035050A /* ViewController.swift */,
 				F45D18272282BA070035050A /* Main.storyboard */,
-				F45D182C2282BA080035050A /* LaunchScreen.storyboard */,
 				F49EB1602282EA82004CDAAD /* CitiesTableAnimation.swift */,
+				F45D182C2282BA080035050A /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";

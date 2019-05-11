@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct CitiesModel {
-    let name:String
+public struct CitiesModel {
+    public private(set) var name:String
 }

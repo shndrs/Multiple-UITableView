@@ -8,9 +8,9 @@
 
 import UIKit
 
-struct InfoModel {
-    let desc:String
-    let population:String
-    let lang:String
-    let image:UIImage?
+public struct InfoModel {
+    public private(set) var desc:String
+    public private(set) var population:String
+    public private(set) var lang:String
+    public private(set) var image:UIImage?
 }
