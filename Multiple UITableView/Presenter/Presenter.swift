@@ -9,8 +9,8 @@
 import UIKit
 
 protocol View:AnyObject {
-    func setCities(with object:[CitiesModel])
-    func setInfo(with object:[InfoModel])
+    func setCities(with object:[CitiesModel]) -> Void
+    func setInfo(with object:[InfoModel]) -> Void
 }
 
 final class Presenter: NSObject {

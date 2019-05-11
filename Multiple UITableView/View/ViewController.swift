@@ -45,6 +45,7 @@ final class ViewController: UIViewController {
                              leadingConstraint: infoTableLeadingConstraint).animate()
     }
     private func generateCitiesDict() {
+        
         for city in cities {
             let cityKey = String(city.name.prefix(1))
             if var cityValues = citiesDictionary[cityKey] {
@@ -54,7 +55,6 @@ final class ViewController: UIViewController {
                 citiesDictionary[cityKey] = [city.name]
             }
         }
-        
         citySectionTitles = [String](citiesDictionary.keys)
         citySectionTitles = citySectionTitles.sorted(by: { $0 < $1 })
     }
@@ -95,6 +95,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             return nil
         }
     }
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if tableView == citiesTableView {
             return 45
@@ -110,8 +111,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             if let cityValues = citiesDictionary[cityKey] {
                 return cityValues.count
             }
-            
             return 0
+            
         } else {
             return infoes.count
         }
