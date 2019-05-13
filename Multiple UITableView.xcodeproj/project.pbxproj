@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F433BD1A22893FB900281381 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433BD1922893FB900281381 /* UITableView.swift */; };
 		F43AD77E2286906E007CACA6 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43AD77D2286906E007CACA6 /* Strings.swift */; };
 		F45D18242282BA070035050A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45D18232282BA070035050A /* AppDelegate.swift */; };
 		F45D18262282BA070035050A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45D18252282BA070035050A /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F433BD1922893FB900281381 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		F43AD77D2286906E007CACA6 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		F45D18202282BA070035050A /* Multiple UITableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Multiple UITableView.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F45D18232282BA070035050A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,9 +55,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F433BD1822893FA400281381 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F433BD1922893FB900281381 /* UITableView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		F43AD77B22869054007CACA6 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				F433BD1822893FA400281381 /* Extensions */,
 				F43AD77F2286A81B007CACA6 /* Application Delegate */,
 				F43AD77C22869061007CACA6 /* Utility */,
 				F49EB15F2282D27B004CDAAD /* Resources */,
@@ -232,6 +243,7 @@
 				F43AD77E2286906E007CACA6 /* Strings.swift in Sources */,
 				F45D18262282BA070035050A /* ViewController.swift in Sources */,
 				F45D18242282BA070035050A /* AppDelegate.swift in Sources */,
+				F433BD1A22893FB900281381 /* UITableView.swift in Sources */,
 				F45D183C2282BCC20035050A /* Presenter.swift in Sources */,
 				F45D18462282BDF80035050A /* InfoModel.swift in Sources */,
 				F45D18372282BBD90035050A /* InfoTVC.swift in Sources */,

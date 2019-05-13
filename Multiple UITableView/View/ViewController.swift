@@ -161,12 +161,12 @@ extension ViewController: View {
     func setCities(with object: [CitiesModel]) {
         cities = object
         generateCitiesDict()
-        citiesTableView.reloadData()
+        citiesTableView.asynchronousReload()
     }
     
     func setInfo(with object: [InfoModel]) {
         infoes = object
-        infoTableView.reloadData()
+        infoTableView.asynchronousReload()
     }
 }
 
