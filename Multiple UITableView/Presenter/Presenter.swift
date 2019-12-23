@@ -23,8 +23,19 @@ final class Presenter: NSObject {
     
     public func getCities() {
         
-        var array = Array<CitiesModel>()
-        
+        DispatchQueue.global(qos: .background).async { [weak self] in
+            
+            guard self != nil else { return }
+            
+            let array = self?.setCities()
+            
+            DispatchQueue.main.async {
+                self?.view?.setCities(with: array ?? Array<CitiesModel>())
+            }
+        }
+    }
+    
+    private func setCities() -> Array<CitiesModel> {
         let athen = CitiesModel(name:Strings.athen.rawValue)
         let helsinki = CitiesModel(name:Strings.helsinki.rawValue)
         let montreal = CitiesModel(name:Strings.montreal.rawValue)
@@ -43,30 +54,28 @@ final class Presenter: NSObject {
         let torin = CitiesModel(name:Strings.torin.rawValue)
         let berlin = CitiesModel(name:Strings.berlin.rawValue)
         
-        array.append(athen)
-        array.append(helsinki)
-        array.append(espoo)
-        array.append(montreal)
-        array.append(newyork)
-        array.append(milan)
-        array.append(la)
-        array.append(tehran)
-        array.append(london)
-        array.append(vancouver)
-        array.append(rome)
-        array.append(manchester)
-        array.append(lisbon)
-        array.append(texas)
-        array.append(denver)
-        array.append(torin)
-        array.append(berlin)
+        var array = Array<CitiesModel>()
         
-        view?.setCities(with: array)
+        array = [athen, helsinki, montreal, espoo, newyork, milan,
+                 la, tehran, london, vancouver, rome, manchester,
+                 lisbon, texas, denver, torin, berlin]
+        return array
     }
     
     public func getInfo() {
         
-        var array = Array<InfoModel>()
+        DispatchQueue.global(qos: .background).async { [weak self] in
+            guard self != nil else { return }
+            
+            let array = self?.setInfos()
+            
+            DispatchQueue.main.async {
+                self?.view?.setInfo(with: array ?? Array<InfoModel>())
+            }
+        }
+    }
+    
+    private func setInfos() -> Array<InfoModel> {
         
         let ny = InfoModel.init(desc: Strings.nyDesc.rawValue,
                                 population: Strings.nyPopulation.rawValue,
@@ -80,10 +89,7 @@ final class Presenter: NSObject {
                                    population: Strings.milanPopulation.rawValue,
                                    lang: Strings.milanLang.rawValue, image: #imageLiteral(resourceName: "milan"))
         
-        array.append(ny)
-        array.append(montreal)
-        array.append(milan)
-        
-        view?.setInfo(with: array)
+        let array = [ny, montreal, milan]
+        return array
     }
 }

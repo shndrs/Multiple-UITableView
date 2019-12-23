@@ -10,10 +10,18 @@ import UIKit
 
 final class ViewController: UIViewController {
     
-    private var cities = Array<CitiesModel>()
-    private var infoes = Array<InfoModel>()
-    private var citiesDictionary = [String: Array<String>]()
-    private var citySectionTitles = Array<String>()
+    private lazy var cities: Array<CitiesModel> = {
+        return Array<CitiesModel>()
+    }()
+    private lazy var infoes: Array<InfoModel> = {
+        return Array<InfoModel>()
+    }()
+    private lazy var citiesDictionary: [String: Array<String>] = {
+        return [String: Array<String>]()
+    }()
+    private lazy var citySectionTitles: Array<String> = {
+        return Array<String>()
+    }()
     
     private lazy var presenter: Presenter = {
         let temp = Presenter(view: self)
@@ -155,7 +163,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-// MARK: - Presenter Impelementation
+// MARK: - View Impelementation
 
 extension ViewController: View {
     func setCities(with object: [CitiesModel]) {
@@ -169,4 +177,3 @@ extension ViewController: View {
         infoTableView.asynchronousReload()
     }
 }
-

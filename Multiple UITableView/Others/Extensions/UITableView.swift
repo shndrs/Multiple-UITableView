@@ -13,7 +13,6 @@ extension UITableView {
     public func asynchronousReload() {
         
         DispatchQueue.main.async { [weak self] in
-            
             guard let this = self else { return }
             this.reloadData()
         }

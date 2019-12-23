@@ -26,9 +26,7 @@ struct CitiesTableAnimation: CitiesTable {
     public func animate() {
         
         if leadingConstraint.constant == 0 {
-            
             UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseInOut, animations: {
-                
                 self.leadingConstraint.constant = 104
                 self.parentView.layoutIfNeeded()
             })

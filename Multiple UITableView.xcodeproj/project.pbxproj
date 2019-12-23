@@ -63,6 +63,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		F433BD1B22894D1900281381 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F45D18272282BA070035050A /* Main.storyboard */,
+				F45D182C2282BA080035050A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		F43AD77B22869054007CACA6 /* Others */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,11 +158,10 @@
 		F45D183E2282BCF80035050A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F433BD1B22894D1900281381 /* Storyboards */,
 				F45D18392282BBE30035050A /* Cells */,
 				F45D18252282BA070035050A /* ViewController.swift */,
-				F45D18272282BA070035050A /* Main.storyboard */,
 				F49EB1602282EA82004CDAAD /* CitiesTableAnimation.swift */,
-				F45D182C2282BA080035050A /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
